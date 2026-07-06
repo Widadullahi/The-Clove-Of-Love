@@ -255,7 +255,7 @@ function OnboardingWizard() {
       } else if (step === 6) {
         await saveProfileFields({ onboarding_completed: true } as never);
         toast.success("Your SoulMate profile is complete.");
-        navigate({ to: "/" });
+        navigate({ to: "/matches" });
         return;
       }
       setStep((s) => Math.min(s + 1, steps.length - 1));
