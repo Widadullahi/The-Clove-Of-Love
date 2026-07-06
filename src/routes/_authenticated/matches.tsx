@@ -100,7 +100,7 @@ function scoreCompatibility(me: Profile | null, mePrefs: Prefs | null, other: Pr
 function explain(me: Profile | null, other: Profile): string {
   if (!me) return "A member our matchmakers curated for you based on shared intent and values.";
   const parts: string[] = [];
-  if (me.religion && me.religion === other.religion) parts.push(`shared ${me.religion} faith`);
+  if (me.religion && me.religion === other.religion) parts.push(`${me.religion} faith`);
   if (me.marriage_timeline === other.marriage_timeline && me.marriage_timeline)
     parts.push(`same marriage timeline (${TIMELINE_LABELS[me.marriage_timeline]?.toLowerCase()})`);
   const myVals = new Set(me.core_values ?? []);
