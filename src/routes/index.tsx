@@ -126,12 +126,12 @@ function Nav() {
         </ul>
         <div className="flex items-center gap-3">
           <a
-            href="#signin"
+            href="/auth"
             className="hidden sm:inline text-sm text-ivory/80 hover:text-gold transition-colors"
           >
             Sign in
           </a>
-          <GoldButton href="#join" className="px-5 py-2.5 text-xs">
+          <GoldButton href="/auth" className="px-5 py-2.5 text-xs">
             Find My SoulMate
           </GoldButton>
         </div>
@@ -157,7 +157,7 @@ function Hero() {
             Just intentional introductions to people who are ready for forever.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <GoldButton href="#join">Find My SoulMate →</GoldButton>
+            <GoldButton href="/auth">Find My SoulMate →</GoldButton>
             <GhostButton href="#how">Our philosophy</GhostButton>
           </div>
 
@@ -554,7 +554,7 @@ function Concierge() {
           matching, in the language you would use with a wise friend.
         </p>
         <div className="mt-10 flex justify-center">
-          <GoldButton href="#join">Meet your Concierge</GoldButton>
+          <GoldButton href="/auth">Meet your Concierge</GoldButton>
         </div>
       </div>
     </section>
@@ -690,7 +690,7 @@ function Pricing() {
                 ))}
               </ul>
               <div className="mt-10">
-                <GoldButton href="#join" className="w-full">
+                <GoldButton href="/auth" className="w-full">
                   Begin verification →
                 </GoldButton>
               </div>
@@ -812,7 +812,7 @@ function FinalCTA() {
           your profile in minutes. It is free to begin.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <GoldButton href="#join">Find My SoulMate →</GoldButton>
+          <GoldButton href="/auth">Find My SoulMate →</GoldButton>
           <GhostButton href="#how">Create a free account</GhostButton>
         </div>
       </div>
