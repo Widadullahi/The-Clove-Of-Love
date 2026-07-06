@@ -14,6 +14,27 @@ export type Database = {
   }
   public: {
     Tables: {
+      interests: {
+        Row: {
+          created_at: string
+          from_user: string
+          id: string
+          to_user: string
+        }
+        Insert: {
+          created_at?: string
+          from_user: string
+          id?: string
+          to_user: string
+        }
+        Update: {
+          created_at?: string
+          from_user?: string
+          id?: string
+          to_user?: string
+        }
+        Relationships: []
+      }
       partner_preferences: {
         Row: {
           age_max: number | null
