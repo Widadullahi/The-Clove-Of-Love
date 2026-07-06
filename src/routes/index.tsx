@@ -126,12 +126,12 @@ function Nav() {
         </ul>
         <div className="flex items-center gap-3">
           <a
-            href="#signin"
+            href="/auth"
             className="hidden sm:inline text-sm text-ivory/80 hover:text-gold transition-colors"
           >
             Sign in
           </a>
-          <GoldButton href="#join" className="px-5 py-2.5 text-xs">
+          <GoldButton href="/auth" className="px-5 py-2.5 text-xs">
             Find My SoulMate
           </GoldButton>
         </div>
