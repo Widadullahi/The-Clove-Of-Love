@@ -14,7 +14,141 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      partner_preferences: {
+        Row: {
+          age_max: number | null
+          age_min: number | null
+          created_at: string
+          deal_breakers: string[] | null
+          education_min: string | null
+          marriage_timeline: string | null
+          must_haves: string[] | null
+          preferred_ethnicities: string[] | null
+          preferred_locations: string[] | null
+          preferred_religions: string[] | null
+          religiosity_importance: string | null
+          updated_at: string
+          user_id: string
+          wants_children: string | null
+        }
+        Insert: {
+          age_max?: number | null
+          age_min?: number | null
+          created_at?: string
+          deal_breakers?: string[] | null
+          education_min?: string | null
+          marriage_timeline?: string | null
+          must_haves?: string[] | null
+          preferred_ethnicities?: string[] | null
+          preferred_locations?: string[] | null
+          preferred_religions?: string[] | null
+          religiosity_importance?: string | null
+          updated_at?: string
+          user_id: string
+          wants_children?: string | null
+        }
+        Update: {
+          age_max?: number | null
+          age_min?: number | null
+          created_at?: string
+          deal_breakers?: string[] | null
+          education_min?: string | null
+          marriage_timeline?: string | null
+          must_haves?: string[] | null
+          preferred_ethnicities?: string[] | null
+          preferred_locations?: string[] | null
+          preferred_religions?: string[] | null
+          religiosity_importance?: string | null
+          updated_at?: string
+          user_id?: string
+          wants_children?: string | null
+        }
+        Relationships: []
+      }
+      profiles: {
+        Row: {
+          about_me: string | null
+          avatar_url: string | null
+          communication_style: string | null
+          core_values: string[] | null
+          created_at: string
+          date_of_birth: string | null
+          education: string | null
+          ethnicity: string | null
+          full_name: string | null
+          gender: string | null
+          has_children: string | null
+          id: string
+          languages: string[] | null
+          lifestyle: Json | null
+          location_city: string | null
+          location_country: string | null
+          marriage_timeline: string | null
+          occupation: string | null
+          onboarding_completed: boolean
+          phone: string | null
+          phone_verified: boolean
+          religion: string | null
+          religiosity: string | null
+          updated_at: string
+          wants_children: string | null
+        }
+        Insert: {
+          about_me?: string | null
+          avatar_url?: string | null
+          communication_style?: string | null
+          core_values?: string[] | null
+          created_at?: string
+          date_of_birth?: string | null
+          education?: string | null
+          ethnicity?: string | null
+          full_name?: string | null
+          gender?: string | null
+          has_children?: string | null
+          id: string
+          languages?: string[] | null
+          lifestyle?: Json | null
+          location_city?: string | null
+          location_country?: string | null
+          marriage_timeline?: string | null
+          occupation?: string | null
+          onboarding_completed?: boolean
+          phone?: string | null
+          phone_verified?: boolean
+          religion?: string | null
+          religiosity?: string | null
+          updated_at?: string
+          wants_children?: string | null
+        }
+        Update: {
+          about_me?: string | null
+          avatar_url?: string | null
+          communication_style?: string | null
+          core_values?: string[] | null
+          created_at?: string
+          date_of_birth?: string | null
+          education?: string | null
+          ethnicity?: string | null
+          full_name?: string | null
+          gender?: string | null
+          has_children?: string | null
+          id?: string
+          languages?: string[] | null
+          lifestyle?: Json | null
+          location_city?: string | null
+          location_country?: string | null
+          marriage_timeline?: string | null
+          occupation?: string | null
+          onboarding_completed?: boolean
+          phone?: string | null
+          phone_verified?: boolean
+          religion?: string | null
+          religiosity?: string | null
+          updated_at?: string
+          wants_children?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
