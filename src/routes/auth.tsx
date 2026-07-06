@@ -28,14 +28,13 @@ function AuthPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [checking, setChecking] = useState(true);
+  const [checking, setChecking] = useState(false);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
       if (data.session) {
+        setChecking(true);
         navigate({ to: "/onboarding" });
-      } else {
-        setChecking(false);
       }
     });
   }, [navigate]);
