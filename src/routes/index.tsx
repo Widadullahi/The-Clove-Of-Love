@@ -112,7 +112,7 @@ function Nav() {
             S
           </span>
           <span className="font-display text-xl text-ivory tracking-tight">
-            SoulMate
+            Soul Meet
           </span>
         </a>
         <ul className="hidden lg:flex items-center gap-9 text-sm text-ivory/80">
@@ -132,7 +132,7 @@ function Nav() {
             Sign in
           </a>
           <GoldButton href="/auth" className="px-5 py-2.5 text-xs">
-            Find My SoulMate
+            Find My Soul Meet
           </GoldButton>
         </div>
       </nav>
@@ -152,12 +152,12 @@ function Hero() {
             <span className="italic text-gold">meant to marry.</span>
           </h1>
           <p className="mt-7 text-lg text-ivory/70 max-w-xl font-light leading-relaxed">
-            SoulMate is a private, AI-powered matrimonial platform for verified,
+            Soul Meet is a private, AI-powered matrimonial platform for verified,
             marriage-minded singles across Africa. No endless swiping. No games.
             Just intentional introductions to people who are ready for forever.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <GoldButton href="/auth">Find My SoulMate →</GoldButton>
+            <GoldButton href="/auth">Find My Soul Meet →</GoldButton>
             <GhostButton href="#how">Our philosophy</GhostButton>
           </div>
 
@@ -390,7 +390,7 @@ function SoulScore() {
             </div>
 
             <p className="mt-6 text-xs text-ivory/40 italic">
-              — Written for you by the SoulMate AI Concierge
+              — Written for you by the Soul Meet AI Concierge
             </p>
           </div>
         </div>
@@ -513,7 +513,7 @@ function Trust() {
               <span className="italic text-gold">be proud of.</span>
             </>
           }
-          subtitle="SoulMate is the platform you can confidently introduce to your sister, your cousin, or your closest friend. That is the bar."
+          subtitle="Soul Meet is the platform you can confidently introduce to your sister, your cousin, or your closest friend. That is the bar."
           align="center"
         />
         <ul className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -575,7 +575,7 @@ function Stories() {
       names: "Halima & Yusuf",
       city: "Abuja · engaged 2026",
       quote:
-        "I had almost given up. SoulMate did not send me a hundred profiles. It sent me the right three. Yusuf was the second.",
+        "I had almost given up. Soul Meet did not send me a hundred profiles. It sent me the right three. Yusuf was the second.",
     },
     {
       img: story3,
@@ -596,7 +596,7 @@ function Stories() {
               <span className="italic text-gold">match counts.</span>
             </>
           }
-          subtitle="These are members who met on SoulMate and are now building a home."
+          subtitle="These are members who met on Soul Meet and are now building a home."
         />
         <ul className="mt-16 grid md:grid-cols-3 gap-6">
           {stories.map((s) => (
@@ -751,8 +751,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 function FAQ() {
   const items = [
     {
-      q: "Is SoulMate a dating app?",
-      a: "No. SoulMate is a matrimonial platform for people who are intentionally seeking a lifelong marriage partner. Every product decision — from verification to daily curation — reinforces that.",
+      q: "Is Soul Meet a dating app?",
+      a: "No. Soul Meet is a matrimonial platform for people who are intentionally seeking a lifelong marriage partner. Every product decision — from verification to daily curation — reinforces that.",
     },
     {
       q: "Why is there a verification fee?",
@@ -812,7 +812,7 @@ function FinalCTA() {
           your profile in minutes. It is free to begin.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <GoldButton href="/auth">Find My SoulMate →</GoldButton>
+          <GoldButton href="/auth">Find My Soul Meet →</GoldButton>
           <GhostButton href="#how">Create a free account</GhostButton>
         </div>
       </div>
@@ -829,7 +829,7 @@ function Footer() {
             <span className="w-8 h-8 rounded-full bg-gradient-gold grid place-items-center text-emerald-deep font-display italic font-bold">
               S
             </span>
-            <span className="font-display text-xl text-ivory">SoulMate</span>
+            <span className="font-display text-xl text-ivory">Soul Meet</span>
           </a>
           <p className="mt-5 text-sm text-ivory/50 max-w-sm leading-relaxed">
             Africa's premium AI-powered matrimonial platform. Built for people
@@ -867,7 +867,7 @@ function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-wrap items-center justify-between gap-4 text-xs text-ivory/40">
-          <span>© {new Date().getFullYear()} SoulMate. Made with intention in Lagos.</span>
+          <span>© {new Date().getFullYear()} Soul Meet. Made with intention in Lagos.</span>
           <span>Serious hearts. Lasting marriages.</span>
         </div>
       </div>

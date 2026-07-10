@@ -77,15 +77,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SoulMate — Where Forever Begins" },
+      { title: "Soul Meet — Where Forever Begins" },
       {
         name: "description",
         content:
-          "SoulMate is Africa's premium AI-powered matrimonial platform for verified, marriage-minded singles. Meet with intention. Love with purpose.",
+          "Soul Meet is Africa's premium AI-powered matrimonial platform for verified, marriage-minded singles. Meet with intention. Love with purpose.",
       },
-      { name: "author", content: "SoulMate" },
+      { name: "author", content: "Soul Meet" },
       { name: "theme-color", content: "#0d1b15" },
-      { property: "og:title", content: "SoulMate — Where Forever Begins" },
+      { property: "og:title", content: "Soul Meet — Where Forever Begins" },
       {
         property: "og:description",
         content:
@@ -93,7 +93,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "SoulMate — Where Forever Begins" },
+      { name: "twitter:title", content: "Soul Meet — Where Forever Begins" },
       {
         name: "twitter:description",
         content:

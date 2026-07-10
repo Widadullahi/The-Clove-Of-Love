@@ -12,8 +12,8 @@ export const Route = createFileRoute("/auth")({
   ssr: false,
   head: () => ({
     meta: [
-      { title: "Sign in or join — SoulMate" },
-      { name: "description", content: "Join SoulMate — Africa's verified matrimonial platform for marriage-minded singles." },
+      { title: "Sign in or join — Soul Meet" },
+      { name: "description", content: "Join Soul Meet — Africa's verified matrimonial platform for marriage-minded singles." },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -59,7 +59,7 @@ function AuthPage() {
         });
         if (error) throw error;
         if (data.session) {
-          toast.success("Welcome to SoulMate.");
+          toast.success("Welcome to Soul Meet.");
           router.invalidate();
           navigate({ to: "/onboarding" });
         } else {
@@ -89,7 +89,7 @@ function AuthPage() {
       <Toaster />
       <header className="border-b border-border/40">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-          <Link to="/" className="font-serif text-2xl text-primary tracking-tight">SoulMate</Link>
+          <Link to="/" className="font-serif text-2xl text-primary tracking-tight">Soul Meet</Link>
           <button
             onClick={() => setMode(mode === "signup" ? "signin" : "signup")}
             className="text-sm text-muted-foreground hover:text-foreground transition"
