@@ -114,7 +114,7 @@ function Nav() {
           </span>
           <span className="flex flex-col leading-none">
             <span className="font-display text-[1.35rem] text-ivory tracking-tight">
-              Soul<span className="text-gold">·</span>Meet
+              The Clove of Love
             </span>
             <span className="text-[9px] uppercase tracking-[0.35em] text-ivory/40 mt-1">
               Est. Lagos · MMXXVI
@@ -139,7 +139,7 @@ function Nav() {
             Sign in
           </a>
           <GoldButton href="/auth" className="px-5 py-2.5 text-xs">
-            Find My Soul Meet
+            Begin the Rite
           </GoldButton>
         </div>
       </nav>
@@ -176,12 +176,12 @@ function Hero() {
             <span className="italic text-gold">to marry.</span>
           </h1>
           <p className="mt-8 text-lg text-ivory/70 max-w-xl font-light leading-[1.7]">
-            Soul Meet is a private, AI-powered matrimonial house for verified,
+            The Clove of Love is a private, AI-powered matrimonial house for verified,
             marriage-minded singles across Africa. No endless swiping. No games.
             Just intentional introductions to people ready for forever.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
-            <GoldButton href="/auth">Find My Soul Meet →</GoldButton>
+            <GoldButton href="/auth">Begin the Rite →</GoldButton>
             <GhostButton href="#how">Our philosophy</GhostButton>
           </div>
 
@@ -458,7 +458,7 @@ function SoulScore() {
             </div>
 
             <p className="mt-6 text-xs text-ivory/40 italic">
-              — Written for you by the Soul Meet AI Concierge
+              — Written for you by the The Clove of Love AI Concierge
             </p>
           </div>
         </div>
@@ -581,7 +581,7 @@ function Trust() {
               <span className="italic text-gold">be proud of.</span>
             </>
           }
-          subtitle="Soul Meet is the platform you can confidently introduce to your sister, your cousin, or your closest friend. That is the bar."
+          subtitle="The Clove of Love is the platform you can confidently introduce to your sister, your cousin, or your closest friend. That is the bar."
           align="center"
         />
         <ul className="mt-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -643,7 +643,7 @@ function Stories() {
       names: "Halima & Yusuf",
       city: "Abuja · engaged 2026",
       quote:
-        "I had almost given up. Soul Meet did not send me a hundred profiles. It sent me the right three. Yusuf was the second.",
+        "I had almost given up. The Clove of Love did not send me a hundred profiles. It sent me the right three. Yusuf was the second.",
     },
     {
       img: story3,
@@ -664,7 +664,7 @@ function Stories() {
               <span className="italic text-gold">match counts.</span>
             </>
           }
-          subtitle="These are members who met on Soul Meet and are now building a home."
+          subtitle="These are members who met on The Clove of Love and are now building a home."
         />
         <ul className="mt-16 grid md:grid-cols-3 gap-6">
           {stories.map((s) => (
@@ -819,8 +819,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 function FAQ() {
   const items = [
     {
-      q: "Is Soul Meet a dating app?",
-      a: "No. Soul Meet is a matrimonial platform for people who are intentionally seeking a lifelong marriage partner. Every product decision — from verification to daily curation — reinforces that.",
+      q: "Is The Clove of Love a dating app?",
+      a: "No. The Clove of Love is a matrimonial platform for people who are intentionally seeking a lifelong marriage partner. Every product decision — from verification to daily curation — reinforces that.",
     },
     {
       q: "Why is there a verification fee?",
@@ -880,7 +880,7 @@ function FinalCTA() {
           your profile in minutes. It is free to begin.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-          <GoldButton href="/auth">Find My Soul Meet →</GoldButton>
+          <GoldButton href="/auth">Begin the Rite →</GoldButton>
           <GhostButton href="#how">Create a free account</GhostButton>
         </div>
       </div>
@@ -898,7 +898,7 @@ function Footer() {
               <span className="absolute inset-1 rounded-full border border-gold/25" />
               <span className="font-display italic font-semibold text-gold text-lg leading-none">Sm</span>
             </span>
-            <span className="font-display text-xl text-ivory">Soul<span className="text-gold">·</span>Meet</span>
+            <span className="font-display text-xl text-ivory">The Clove of Love</span>
           </a>
 
           <p className="mt-5 text-sm text-ivory/50 max-w-sm leading-relaxed">
@@ -937,7 +937,7 @@ function Footer() {
       </div>
       <div className="border-t border-border">
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-6 flex flex-wrap items-center justify-between gap-4 text-xs text-ivory/40">
-          <span>© {new Date().getFullYear()} Soul Meet. Made with intention in Lagos.</span>
+          <span>© {new Date().getFullYear()} The Clove of Love. Made with intention in Lagos.</span>
           <span>Serious hearts. Lasting marriages.</span>
         </div>
       </div>
