@@ -16,7 +16,7 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/_authenticated/onboarding")({
   head: () => ({
     meta: [
-      { title: "Complete your profile — SoulMate" },
+      { title: "Complete your profile — Soul Meet" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -254,7 +254,7 @@ function OnboardingWizard() {
         await savePrefFields(prefs);
       } else if (step === 6) {
         await saveProfileFields({ onboarding_completed: true } as never);
-        toast.success("Your SoulMate profile is complete.");
+        toast.success("Your Soul Meet profile is complete.");
         navigate({ to: "/matches" });
         return;
       }
@@ -282,7 +282,7 @@ function OnboardingWizard() {
       <Toaster />
       <header className="border-b border-border/40">
         <div className="max-w-3xl mx-auto px-6 py-5 flex items-center justify-between">
-          <span className="font-serif text-2xl text-primary tracking-tight">SoulMate</span>
+          <span className="font-serif text-2xl text-primary tracking-tight">Soul Meet</span>
           <button
             onClick={async () => { await supabase.auth.signOut(); navigate({ to: "/auth" }); }}
             className="text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground"
@@ -506,7 +506,7 @@ function OnboardingWizard() {
           {step === 6 && (
             <div className="text-center py-8">
               <p className="text-xs uppercase tracking-[0.3em] text-primary/70 mb-4">All set</p>
-              <h2 className="font-serif text-3xl mb-4">Welcome to SoulMate, {profile.full_name.split(" ")[0]}.</h2>
+              <h2 className="font-serif text-3xl mb-4">Welcome to Soul Meet, {profile.full_name.split(" ")[0]}.</h2>
               <p className="text-muted-foreground max-w-md mx-auto">
                 Our matchmakers and SoulScore™ engine will review your profile and begin your curation.
                 You'll receive your first hand-picked introductions within 48 hours.
@@ -519,7 +519,7 @@ function OnboardingWizard() {
               Back
             </Button>
             <Button onClick={nextStep} disabled={saving} className="min-w-32">
-              {saving ? "Saving…" : step === steps.length - 1 ? "Enter SoulMate" : "Continue"}
+              {saving ? "Saving…" : step === steps.length - 1 ? "Enter Soul Meet" : "Continue"}
             </Button>
           </div>
         </Card>
