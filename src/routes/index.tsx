@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroCouple from "@/assets/hero-couple.jpg";
+import logoMark from "@/assets/logo-mark.png";
+
 import story1 from "@/assets/story-1.jpg";
 import story2 from "@/assets/story-2.jpg";
 import story3 from "@/assets/story-3.jpg";
@@ -108,10 +110,14 @@ function Nav() {
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-emerald-deep/75 border-b border-border/60">
       <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 h-20">
         <a href="#" className="flex items-center gap-3 group">
-          <span aria-hidden className="relative w-10 h-10 rounded-full border border-gold/50 grid place-items-center">
-            <span className="absolute inset-1 rounded-full border border-gold/25" />
-            <span className="font-display italic font-semibold text-gold text-lg leading-none">Sm</span>
-          </span>
+          <img
+            src={logoMark}
+            alt="The Clove of Love"
+            width={40}
+            height={40}
+            className="w-10 h-10 object-contain drop-shadow-[0_2px_8px_rgba(197,160,89,0.35)]"
+          />
+
           <span className="flex flex-col leading-none">
             <span className="font-display text-[1.35rem] text-ivory tracking-tight">
               The Clove of Love
