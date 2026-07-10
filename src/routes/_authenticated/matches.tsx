@@ -10,7 +10,7 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/_authenticated/matches")({
   head: () => ({
     meta: [
-      { title: "Today's curation — Soul Meet" },
+      { title: "Today's curation — The Clove of Love" },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -205,7 +205,7 @@ function MatchesPage() {
       <Toaster />
       <header className="border-b border-border/40">
         <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
-          <Link to="/" className="font-serif text-2xl text-primary tracking-tight">Soul Meet</Link>
+          <Link to="/" className="font-serif text-2xl text-primary tracking-tight">The Clove of Love</Link>
           <nav className="flex items-center gap-6 text-sm">
             <Link to="/matches" className="text-foreground">Curation</Link>
             <Link to="/onboarding" className="text-muted-foreground hover:text-foreground">Profile</Link>
