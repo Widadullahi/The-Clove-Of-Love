@@ -105,26 +105,33 @@ function Nav() {
     { href: "#pricing", label: "Pricing" },
   ];
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-emerald-deep/70 border-b border-border/60">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 h-16">
-        <a href="#" className="flex items-center gap-2.5">
-          <span className="w-8 h-8 rounded-full bg-gradient-gold grid place-items-center text-emerald-deep font-display italic font-bold">
-            S
+    <header className="sticky top-0 z-50 backdrop-blur-xl bg-emerald-deep/75 border-b border-border/60">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-6 lg:px-10 h-20">
+        <a href="#" className="flex items-center gap-3 group">
+          <span aria-hidden className="relative w-10 h-10 rounded-full border border-gold/50 grid place-items-center">
+            <span className="absolute inset-1 rounded-full border border-gold/25" />
+            <span className="font-display italic font-semibold text-gold text-lg leading-none">Sm</span>
           </span>
-          <span className="font-display text-xl text-ivory tracking-tight">
-            Soul Meet
+          <span className="flex flex-col leading-none">
+            <span className="font-display text-[1.35rem] text-ivory tracking-tight">
+              Soul<span className="text-gold">·</span>Meet
+            </span>
+            <span className="text-[9px] uppercase tracking-[0.35em] text-ivory/40 mt-1">
+              Est. Lagos · MMXXVI
+            </span>
           </span>
         </a>
-        <ul className="hidden lg:flex items-center gap-9 text-sm text-ivory/80">
+        <ul className="hidden lg:flex items-center gap-10 text-[13px] text-ivory/75">
           {links.map((l) => (
             <li key={l.href}>
-              <a href={l.href} className="hover:text-gold transition-colors">
+              <a href={l.href} className="hover:text-gold transition-colors relative group">
                 {l.label}
+                <span className="absolute -bottom-1 left-0 right-0 h-px bg-gold scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
               </a>
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           <a
             href="/auth"
             className="hidden sm:inline text-sm text-ivory/80 hover:text-gold transition-colors"
@@ -139,6 +146,7 @@ function Nav() {
     </header>
   );
 }
+
 
 function Hero() {
   return (
