@@ -900,10 +900,8 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
           <a href="#" className="flex items-center gap-3">
-            <span aria-hidden className="relative w-10 h-10 rounded-full border border-gold/50 grid place-items-center">
-              <span className="absolute inset-1 rounded-full border border-gold/25" />
-              <span className="font-display italic font-semibold text-gold text-lg leading-none">Sm</span>
-            </span>
+            <img src={logoMark} alt="The Clove of Love" width={40} height={40} className="w-10 h-10 object-contain" loading="lazy" />
+
             <span className="font-display text-xl text-ivory">The Clove of Love</span>
           </a>
 
