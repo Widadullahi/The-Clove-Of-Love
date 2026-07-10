@@ -150,50 +150,64 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative overflow-hidden grain">
+      <span className="grain-overlay" aria-hidden />
       <div className="absolute inset-0 adinkra-pattern pointer-events-none" aria-hidden />
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-16 lg:pt-24 pb-24 lg:pb-32 grid lg:grid-cols-12 gap-14 items-center">
+      {/* Editorial chapter mark */}
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-4 text-[10px] uppercase tracking-[0.5em] text-ivory/40">
+        <span className="h-px w-16 bg-ivory/20" />
+        <span>Volume I · The Prologue</span>
+        <span className="h-px w-16 bg-ivory/20" />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 lg:pt-36 pb-24 lg:pb-36 grid lg:grid-cols-12 gap-14 items-center">
         <div className="lg:col-span-6 animate-fade-up">
-          <Eyebrow>Matrimony for the Discerning</Eyebrow>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl text-ivory leading-[1.02] mt-6 text-balance">
-            Meet the one you're{" "}
-            <span className="italic text-gold">meant to marry.</span>
+          <div className="flex items-center gap-3">
+            <span className="chapter-mark text-sm">№ 01</span>
+            <span className="h-px w-10 bg-gold/40" />
+            <Eyebrow>Matrimony for the Discerning</Eyebrow>
+          </div>
+          <h1 className="font-display text-[3.25rem] md:text-7xl lg:text-[5.5rem] text-ivory leading-[0.98] mt-8 text-balance tracking-tight">
+            Meet the one <br className="hidden md:block" />
+            you're <span className="italic text-gold relative">
+              meant
+              <span className="absolute -bottom-1 left-0 right-2 h-px bg-gold/60" aria-hidden />
+            </span>{" "}
+            <span className="italic text-gold">to marry.</span>
           </h1>
-          <p className="mt-7 text-lg text-ivory/70 max-w-xl font-light leading-relaxed">
-            Soul Meet is a private, AI-powered matrimonial platform for verified,
+          <p className="mt-8 text-lg text-ivory/70 max-w-xl font-light leading-[1.7]">
+            Soul Meet is a private, AI-powered matrimonial house for verified,
             marriage-minded singles across Africa. No endless swiping. No games.
-            Just intentional introductions to people who are ready for forever.
+            Just intentional introductions to people ready for forever.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <GoldButton href="/auth">Find My Soul Meet →</GoldButton>
             <GhostButton href="#how">Our philosophy</GhostButton>
           </div>
 
-          <div className="mt-14 flex items-center gap-5">
-            <div className="flex -space-x-3">
-              {[
-                "linear-gradient(135deg,#d4b67a,#a97e3c)",
-                "linear-gradient(135deg,#e0c9a3,#8a6a3f)",
-                "linear-gradient(135deg,#c5a059,#6b4e22)",
-                "linear-gradient(135deg,#f0dcb2,#b58a4a)",
-              ].map((bg, i) => (
-                <span
-                  key={i}
-                  aria-hidden
-                  className="w-10 h-10 rounded-full border-2 border-emerald-deep"
-                  style={{ background: bg }}
-                />
-              ))}
-            </div>
-            <p className="text-sm text-ivory/60">
-              <span className="text-ivory font-medium">12,400+ verified singles</span>{" "}
-              in Lagos, Abuja, Nairobi & beyond
-            </p>
+          <div className="mt-14 grid grid-cols-3 gap-6 max-w-lg">
+            {[
+              { n: "12,400+", l: "Verified members" },
+              { n: "1,120", l: "Marriages, and counting" },
+              { n: "96%", l: "Median SoulScore™" },
+            ].map((s) => (
+              <div key={s.l} className="border-l border-gold/30 pl-4">
+                <div className="font-display text-2xl md:text-3xl text-ivory">{s.n}</div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-ivory/50 mt-1 leading-snug">
+                  {s.l}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
         {/* Right visual */}
         <div className="lg:col-span-6 relative">
+          {/* Ornament frame */}
+          <div className="absolute -inset-4 lg:-inset-6 border border-gold/20 rounded-[2rem] pointer-events-none" aria-hidden />
+          <div className="absolute -top-3 -left-3 w-16 h-16 border-t-2 border-l-2 border-gold/60 rounded-tl-3xl" aria-hidden />
+          <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-2 border-r-2 border-gold/60 rounded-br-3xl" aria-hidden />
+
           <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-border shadow-editorial">
             <img
               src={heroCouple}
@@ -203,35 +217,46 @@ function Hero() {
               className="absolute inset-0 h-full w-full object-cover"
             />
             <div
-              className="absolute inset-0 bg-gradient-to-t from-emerald-deep via-emerald-deep/30 to-transparent"
+              className="absolute inset-0 bg-gradient-to-t from-emerald-deep via-emerald-deep/40 to-transparent"
               aria-hidden
             />
-            <div className="absolute top-0 right-0 p-8" aria-hidden>
-              <div className="w-24 h-24 border-t-2 border-r-2 border-gold/40 rounded-tr-3xl" />
+            <span className="grain-overlay" aria-hidden />
+
+            {/* Top-right metadata */}
+            <div className="absolute top-6 right-6 text-right">
+              <div className="text-[9px] uppercase tracking-[0.35em] text-ivory/60">
+                Plate I
+              </div>
+              <div className="font-display italic text-ivory/80 text-sm mt-1">
+                Adaeze & Tolu
+              </div>
             </div>
+
             <div className="absolute bottom-0 left-0 right-0 p-8 space-y-4">
-              <span className="inline-block px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-gold text-[10px] font-medium uppercase tracking-[0.2em]">
-                SoulScore™ · 96%
-              </span>
+              <div className="flex items-center gap-3">
+                <span className="inline-block px-3 py-1 rounded-full bg-gold/10 border border-gold/30 text-gold text-[10px] font-medium uppercase tracking-[0.2em]">
+                  SoulScore™ · 96%
+                </span>
+                <span className="hairline flex-1" />
+              </div>
               <h3 className="font-display text-2xl md:text-3xl text-ivory leading-tight">
-                Adaeze & Tolu — introduced this month.
+                Introduced this month, engaged by the next.
               </h3>
-              <span className="divider-gold" aria-hidden />
-              <p className="text-ivory/70 text-sm leading-relaxed">
-                Shared faith, aligned marriage timeline, both eldest children of
-                close-knit families. Their concierge letter is on page two.
+              <p className="text-ivory/70 text-sm leading-relaxed font-light italic">
+                "Shared faith, aligned marriage timeline, both eldest of close-knit
+                families. Their concierge letter is on page two."
               </p>
             </div>
           </div>
 
           {/* Floating trust badge */}
-          <div className="hidden md:flex absolute -bottom-6 -left-6 items-center gap-3 bg-cream text-emerald-deep px-5 py-4 rounded-2xl shadow-editorial">
+          <div className="hidden md:flex absolute -bottom-8 -left-8 items-center gap-3 bg-cream text-emerald-deep px-6 py-4 rounded-2xl shadow-editorial">
             <span className="relative flex h-2.5 w-2.5">
               <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-600 opacity-70 animate-ping" />
               <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-600" />
             </span>
             <div>
-              <div className="text-xs uppercase tracking-widest text-emerald-deep/60">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-emerald-deep/60">
                 Verified today
               </div>
               <div className="font-display italic font-semibold text-lg leading-none mt-0.5">
@@ -239,11 +264,46 @@ function Hero() {
               </div>
             </div>
           </div>
+
+          {/* Concierge quill card */}
+          <div className="hidden lg:flex absolute -top-6 -right-6 items-center gap-3 bg-emerald-deeper/95 backdrop-blur border border-gold/30 px-5 py-3 rounded-full shadow-editorial">
+            <span className="font-display italic text-gold">✒</span>
+            <span className="text-[11px] uppercase tracking-[0.25em] text-ivory/80">
+              A letter, not a swipe
+            </span>
+          </div>
         </div>
       </div>
     </section>
   );
 }
+
+function PressBar() {
+  const outlets = ["BellaNaija", "TechCabal", "Guardian Life", "Ventures Africa", "Pulse", "The Cable", "Ynaija"];
+  return (
+    <section aria-label="Featured in" className="border-y border-border/60 bg-emerald-deeper/40 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 py-8 flex items-center gap-10">
+        <div className="hidden md:flex flex-col shrink-0 border-r border-border pr-8">
+          <span className="text-[10px] uppercase tracking-[0.35em] text-gold">As featured in</span>
+          <span className="font-display italic text-ivory/60 text-sm mt-1">the African press</span>
+        </div>
+        <div className="relative flex-1 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_10%,black_90%,transparent)]">
+          <div className="flex gap-14 animate-marquee whitespace-nowrap w-max">
+            {[...outlets, ...outlets, ...outlets].map((o, i) => (
+              <span
+                key={i}
+                className="font-display italic text-2xl text-ivory/50 hover:text-gold transition-colors"
+              >
+                {o}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 function HowItWorks() {
   const steps = [
