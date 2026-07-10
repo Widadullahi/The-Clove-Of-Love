@@ -893,12 +893,14 @@ function Footer() {
     <footer className="border-t border-border bg-emerald-deeper">
       <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          <a href="#" className="flex items-center gap-2.5">
-            <span className="w-8 h-8 rounded-full bg-gradient-gold grid place-items-center text-emerald-deep font-display italic font-bold">
-              S
+          <a href="#" className="flex items-center gap-3">
+            <span aria-hidden className="relative w-10 h-10 rounded-full border border-gold/50 grid place-items-center">
+              <span className="absolute inset-1 rounded-full border border-gold/25" />
+              <span className="font-display italic font-semibold text-gold text-lg leading-none">Sm</span>
             </span>
-            <span className="font-display text-xl text-ivory">Soul Meet</span>
+            <span className="font-display text-xl text-ivory">Soul<span className="text-gold">·</span>Meet</span>
           </a>
+
           <p className="mt-5 text-sm text-ivory/50 max-w-sm leading-relaxed">
             Africa's premium AI-powered matrimonial platform. Built for people
             who are intentionally seeking a lifelong partner.
@@ -948,7 +950,9 @@ function LandingPage() {
     <main className="min-h-screen bg-emerald-deep text-ivory">
       <Nav />
       <Hero />
+      <PressBar />
       <HowItWorks />
+
       <SoulScore />
       <CuratedMembers />
       <Trust />
