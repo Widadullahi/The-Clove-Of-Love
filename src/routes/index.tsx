@@ -667,14 +667,15 @@ function Stories() {
     },
   ];
   return (
-    <section id="stories" className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="stories" className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Real stories"
+          tone="light"
           title={
             <>
               Marriages, not{" "}
-              <span className="italic text-gold">match counts.</span>
+              <span className="italic text-gold-warm">match counts.</span>
             </>
           }
           subtitle="These are members who met on The Clove of Love and are now building a home."
@@ -683,7 +684,7 @@ function Stories() {
           {stories.map((s) => (
             <li
               key={s.names}
-              className="rounded-3xl overflow-hidden border border-border bg-card/40 flex flex-col"
+              className="rounded-3xl overflow-hidden border border-emerald-deep/10 bg-white flex flex-col shadow-[0_20px_50px_-30px_rgba(13,27,21,0.4)] hover:shadow-[0_30px_70px_-30px_rgba(13,27,21,0.5)] transition-shadow duration-500"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -696,12 +697,12 @@ function Stories() {
                 />
               </div>
               <div className="p-7 flex-1 flex flex-col">
-                <p className="font-display italic text-lg text-ivory/90 leading-relaxed">
+                <p className="font-display italic text-lg text-emerald-deep/90 leading-relaxed">
                   "{s.quote}"
                 </p>
-                <div className="mt-6 pt-5 border-t border-border">
-                  <div className="font-display text-lg text-gold">{s.names}</div>
-                  <div className="text-xs text-ivory/50 tracking-wider uppercase mt-1">
+                <div className="mt-6 pt-5 border-t border-emerald-deep/10">
+                  <div className="font-display text-lg text-gold-warm">{s.names}</div>
+                  <div className="text-xs text-emerald-deep/50 tracking-wider uppercase mt-1">
                     {s.city}
                   </div>
                 </div>
@@ -713,6 +714,7 @@ function Stories() {
     </section>
   );
 }
+
 
 function Pricing() {
   return (
