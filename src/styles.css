@@ -98,6 +98,9 @@
   --gradient-gold: linear-gradient(135deg, var(--gold-soft), var(--gold));
   --shadow-editorial: 0 30px 80px -20px oklch(0 0 0 / 0.6);
   --shadow-gold-glow: 0 20px 60px -20px color-mix(in oklab, var(--gold) 40%, transparent);
+  --shadow-vellum-card: 0 20px 50px -30px oklch(0.22 0.04 155 / 0.35);
+  --shadow-vellum-card-hover: 0 30px 70px -30px oklch(0.22 0.04 155 / 0.5);
+
 }
 
 @layer base {
