@@ -26,20 +26,24 @@ function SectionHeading({
   title,
   subtitle,
   align = "left",
+  tone = "dark",
 }: {
   eyebrow: string;
   title: React.ReactNode;
   subtitle?: string;
   align?: "left" | "center";
+  tone?: "dark" | "light";
 }) {
+  const titleColor = tone === "light" ? "text-emerald-deep" : "text-ivory";
+  const subColor = tone === "light" ? "text-emerald-deep/65" : "text-muted-foreground";
   return (
     <div className={align === "center" ? "text-center mx-auto max-w-3xl" : "max-w-3xl"}>
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-[1.05] mt-5 text-balance">
+      <h2 className={`font-display text-4xl md:text-5xl lg:text-6xl ${titleColor} leading-[1.05] mt-5 text-balance`}>
         {title}
       </h2>
       {subtitle ? (
-        <p className="mt-5 text-muted-foreground text-lg font-light leading-relaxed">
+        <p className={`mt-5 ${subColor} text-lg font-light leading-relaxed`}>
           {subtitle}
         </p>
       ) : null}
@@ -50,6 +54,7 @@ function SectionHeading({
     </div>
   );
 }
+
 
 function GoldButton({
   children,
@@ -339,13 +344,14 @@ function HowItWorks() {
     },
   ];
   return (
-    <section id="how" className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="how" className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="How it works"
+          tone="light"
           title={
             <>
-              Four quiet steps to <span className="italic text-gold">forever.</span>
+              Four quiet steps to <span className="italic text-gold-warm">forever.</span>
             </>
           }
           subtitle="We do not optimise for screen time. We optimise for successful marriages."
@@ -354,15 +360,15 @@ function HowItWorks() {
           {steps.map((s) => (
             <li
               key={s.n}
-              className="group relative p-8 rounded-3xl border border-border bg-card/40 hover:bg-card transition-colors duration-500"
+              className="group relative p-8 rounded-3xl border border-emerald-deep/10 bg-white/70 backdrop-blur-sm hover:bg-white hover:border-gold/40 hover:shadow-[0_20px_50px_-25px_rgba(13,27,21,0.35)] transition-all duration-500"
             >
-              <div className="font-display italic text-5xl text-gold/40 group-hover:text-gold/70 transition-colors">
+              <div className="font-display italic text-5xl text-gold group-hover:text-gold-warm transition-colors">
                 {s.n}
               </div>
-              <h3 className="font-display text-2xl text-ivory mt-4 leading-snug">
+              <h3 className="font-display text-2xl text-emerald-deep mt-4 leading-snug">
                 {s.title}
               </h3>
-              <p className="mt-3 text-sm text-ivory/60 leading-relaxed">{s.body}</p>
+              <p className="mt-3 text-sm text-emerald-deep/70 leading-relaxed">{s.body}</p>
             </li>
           ))}
         </ol>
@@ -370,6 +376,7 @@ function HowItWorks() {
     </section>
   );
 }
+
 
 function SoulScore() {
   const traits = [
@@ -660,14 +667,15 @@ function Stories() {
     },
   ];
   return (
-    <section id="stories" className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="stories" className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Real stories"
+          tone="light"
           title={
             <>
               Marriages, not{" "}
-              <span className="italic text-gold">match counts.</span>
+              <span className="italic text-gold-warm">match counts.</span>
             </>
           }
           subtitle="These are members who met on The Clove of Love and are now building a home."
@@ -676,7 +684,7 @@ function Stories() {
           {stories.map((s) => (
             <li
               key={s.names}
-              className="rounded-3xl overflow-hidden border border-border bg-card/40 flex flex-col"
+              className="rounded-3xl overflow-hidden border border-emerald-deep/10 bg-white flex flex-col shadow-[0_20px_50px_-30px_rgba(13,27,21,0.4)] hover:shadow-[0_30px_70px_-30px_rgba(13,27,21,0.5)] transition-shadow duration-500"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -689,12 +697,12 @@ function Stories() {
                 />
               </div>
               <div className="p-7 flex-1 flex flex-col">
-                <p className="font-display italic text-lg text-ivory/90 leading-relaxed">
+                <p className="font-display italic text-lg text-emerald-deep/90 leading-relaxed">
                   "{s.quote}"
                 </p>
-                <div className="mt-6 pt-5 border-t border-border">
-                  <div className="font-display text-lg text-gold">{s.names}</div>
-                  <div className="text-xs text-ivory/50 tracking-wider uppercase mt-1">
+                <div className="mt-6 pt-5 border-t border-emerald-deep/10">
+                  <div className="font-display text-lg text-gold-warm">{s.names}</div>
+                  <div className="text-xs text-emerald-deep/50 tracking-wider uppercase mt-1">
                     {s.city}
                   </div>
                 </div>
@@ -706,6 +714,7 @@ function Stories() {
     </section>
   );
 }
+
 
 function Pricing() {
   return (
@@ -791,17 +800,17 @@ function Pricing() {
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <li className="border-b border-border">
+    <li className="border-b border-emerald-deep/15">
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between text-left py-6 gap-6 group"
         aria-expanded={open}
       >
-        <span className="font-display text-xl md:text-2xl text-ivory group-hover:text-gold transition-colors">
+        <span className="font-display text-xl md:text-2xl text-emerald-deep group-hover:text-gold-warm transition-colors">
           {q}
         </span>
         <span
-          className={`shrink-0 w-8 h-8 rounded-full border border-gold/40 grid place-items-center text-gold transition-transform duration-300 ${
+          className={`shrink-0 w-8 h-8 rounded-full border border-gold/50 grid place-items-center text-gold-warm transition-transform duration-300 ${
             open ? "rotate-45" : ""
           }`}
           aria-hidden
@@ -815,12 +824,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="text-ivory/60 leading-relaxed max-w-3xl">{a}</p>
+          <p className="text-emerald-deep/70 leading-relaxed max-w-3xl">{a}</p>
         </div>
       </div>
     </li>
   );
 }
+
 
 function FAQ() {
   const items = [
@@ -850,17 +860,19 @@ function FAQ() {
     },
   ];
   return (
-    <section className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-5xl mx-auto px-6 lg:px-10">
+    <section className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-5xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Frequently asked"
+          tone="light"
           title={
             <>
               The questions your mother{" "}
-              <span className="italic text-gold">would also ask.</span>
+              <span className="italic text-gold-warm">would also ask.</span>
             </>
           }
         />
+
         <ul className="mt-12">
           {items.map((it) => (
             <FAQItem key={it.q} q={it.q} a={it.a} />
