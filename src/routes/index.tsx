@@ -360,7 +360,7 @@ function HowItWorks() {
           {steps.map((s) => (
             <li
               key={s.n}
-              className="group relative p-8 rounded-3xl border border-emerald-deep/10 bg-white/70 backdrop-blur-sm hover:bg-white hover:border-gold/40 hover:shadow-[0_20px_50px_-25px_rgba(13,27,21,0.35)] transition-all duration-500"
+              className="group relative p-8 rounded-3xl border border-emerald-deep/10 bg-white/80 backdrop-blur-sm shadow-[var(--shadow-vellum-card)] hover:bg-white hover:border-gold/40 hover:shadow-[var(--shadow-vellum-card-hover)] transition-all duration-500"
             >
               <div className="font-display italic text-5xl text-gold group-hover:text-gold-warm transition-colors">
                 {s.n}
