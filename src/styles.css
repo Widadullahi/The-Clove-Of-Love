@@ -194,6 +194,20 @@
     url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.77  0 0 0 0 0.63  0 0 0 0 0.35  0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/></svg>");
 }
 
+@utility vellum-card {
+  background-color: color-mix(in oklab, white 85%, transparent);
+  border: 1px solid color-mix(in oklab, var(--emerald-deep) 10%, transparent);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: var(--shadow-vellum-card);
+  transition: box-shadow 0.5s ease, border-color 0.5s ease, background-color 0.5s ease;
+}
+@utility vellum-card-hover {
+  background-color: white;
+  border-color: color-mix(in oklab, var(--gold) 45%, transparent);
+  box-shadow: var(--shadow-vellum-card-hover);
+}
+
 @utility chapter-mark {
   font-family: var(--font-display);
   font-style: italic;
