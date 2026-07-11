@@ -860,17 +860,19 @@ function FAQ() {
     },
   ];
   return (
-    <section className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-5xl mx-auto px-6 lg:px-10">
+    <section className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-5xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Frequently asked"
+          tone="light"
           title={
             <>
               The questions your mother{" "}
-              <span className="italic text-gold">would also ask.</span>
+              <span className="italic text-gold-warm">would also ask.</span>
             </>
           }
         />
+
         <ul className="mt-12">
           {items.map((it) => (
             <FAQItem key={it.q} q={it.q} a={it.a} />
