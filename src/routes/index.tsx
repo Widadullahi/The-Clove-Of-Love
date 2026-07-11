@@ -360,7 +360,7 @@ function HowItWorks() {
           {steps.map((s) => (
             <li
               key={s.n}
-              className="group relative p-8 rounded-3xl border border-emerald-deep/10 bg-white/70 backdrop-blur-sm hover:bg-white hover:border-gold/40 hover:shadow-[0_20px_50px_-25px_rgba(13,27,21,0.35)] transition-all duration-500"
+              className="group relative p-8 rounded-3xl border border-emerald-deep/10 bg-white/80 backdrop-blur-sm shadow-[var(--shadow-vellum-card)] hover:bg-white hover:border-gold/40 hover:shadow-[var(--shadow-vellum-card-hover)] transition-all duration-500"
             >
               <div className="font-display italic text-5xl text-gold group-hover:text-gold-warm transition-colors">
                 {s.n}
@@ -584,14 +584,15 @@ function Trust() {
     },
   ];
   return (
-    <section id="trust" className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="trust" className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Trust & Safety"
+          tone="light"
           title={
             <>
               A community your family would{" "}
-              <span className="italic text-gold">be proud of.</span>
+              <span className="italic text-gold-warm">be proud of.</span>
             </>
           }
           subtitle="The Clove of Love is the platform you can confidently introduce to your sister, your cousin, or your closest friend. That is the bar."
@@ -601,13 +602,13 @@ function Trust() {
           {pillars.map((p, i) => (
             <li
               key={p.title}
-              className="p-8 rounded-3xl border border-border bg-card/40 relative"
+              className="vellum-card hover:vellum-card-hover"
             >
-              <div className="font-display italic text-3xl text-gold/40">
+              <div className="font-display italic text-3xl text-gold-warm/70">
                 0{i + 1}
               </div>
-              <h3 className="font-display text-xl text-ivory mt-3">{p.title}</h3>
-              <p className="mt-3 text-sm text-ivory/60 leading-relaxed">{p.body}</p>
+              <h3 className="font-display text-xl text-emerald-deep mt-3">{p.title}</h3>
+              <p className="mt-3 text-sm text-emerald-deep/65 leading-relaxed">{p.body}</p>
             </li>
           ))}
         </ul>
@@ -615,6 +616,7 @@ function Trust() {
     </section>
   );
 }
+
 
 function Concierge() {
   return (
@@ -684,7 +686,7 @@ function Stories() {
           {stories.map((s) => (
             <li
               key={s.names}
-              className="rounded-3xl overflow-hidden border border-emerald-deep/10 bg-white flex flex-col shadow-[0_20px_50px_-30px_rgba(13,27,21,0.4)] hover:shadow-[0_30px_70px_-30px_rgba(13,27,21,0.5)] transition-shadow duration-500"
+              className="rounded-3xl overflow-hidden border border-emerald-deep/10 bg-white flex flex-col shadow-[var(--shadow-vellum-card)] hover:shadow-[var(--shadow-vellum-card-hover)] transition-shadow duration-500"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -718,14 +720,15 @@ function Stories() {
 
 function Pricing() {
   return (
-    <section id="pricing" className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-6xl mx-auto px-6 lg:px-10">
+    <section id="pricing" className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-6xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Membership"
+          tone="light"
           title={
             <>
               Free to join.{" "}
-              <span className="italic text-gold">One-time verification.</span>
+              <span className="italic text-gold-warm">One-time verification.</span>
             </>
           }
           subtitle="A single, transparent fee — never a subscription. It funds the verification, the moderation, and the small daily curation. Nothing more."
@@ -747,14 +750,14 @@ function Pricing() {
           ].map((p) => (
             <div
               key={p.tag}
-              className="relative p-10 rounded-3xl border border-border bg-gradient-emerald shadow-editorial"
+              className="relative p-10 rounded-3xl border border-emerald-deep/10 bg-white shadow-[0_30px_70px_-35px_rgba(13,27,21,0.45)]"
             >
               <Eyebrow>{p.tag}</Eyebrow>
               <div className="mt-6 flex items-baseline gap-3">
-                <span className="font-display text-6xl text-ivory">{p.price}</span>
-                <span className="text-ivory/50 text-sm">{p.note}</span>
+                <span className="font-display text-6xl text-emerald-deep">{p.price}</span>
+                <span className="text-emerald-deep/55 text-sm">{p.note}</span>
               </div>
-              <ul className="mt-8 space-y-3 text-sm text-ivory/75">
+              <ul className="mt-8 space-y-3 text-sm text-emerald-deep/75">
                 {[
                   "Government ID, phone & email verification",
                   "Daily SoulScore™ curated matches",
@@ -765,7 +768,7 @@ function Pricing() {
                 ].map((f) => (
                   <li key={f} className="flex items-start gap-3">
                     <span
-                      className="mt-2 h-1.5 w-1.5 rounded-full bg-gold shrink-0"
+                      className="mt-2 h-1.5 w-1.5 rounded-full bg-gold-warm shrink-0"
                       aria-hidden
                     />
                     {f}
@@ -781,13 +784,13 @@ function Pricing() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-ivory/50">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-xs text-emerald-deep/55">
           <span className="uppercase tracking-widest">Secure payments via</span>
-          <span className="font-display italic text-gold text-lg">Paystack</span>
+          <span className="font-display italic text-gold-warm text-lg">Paystack</span>
           <span aria-hidden>·</span>
-          <span className="font-display italic text-gold text-lg">Flutterwave</span>
+          <span className="font-display italic text-gold-warm text-lg">Flutterwave</span>
           <span aria-hidden>·</span>
-          <span className="font-display italic text-gold text-lg">Stripe</span>
+          <span className="font-display italic text-gold-warm text-lg">Stripe</span>
           <span className="w-full text-center mt-2">
             International members are billed the equivalent in their local currency.
           </span>
@@ -796,6 +799,7 @@ function Pricing() {
     </section>
   );
 }
+
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
