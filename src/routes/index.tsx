@@ -26,20 +26,24 @@ function SectionHeading({
   title,
   subtitle,
   align = "left",
+  tone = "dark",
 }: {
   eyebrow: string;
   title: React.ReactNode;
   subtitle?: string;
   align?: "left" | "center";
+  tone?: "dark" | "light";
 }) {
+  const titleColor = tone === "light" ? "text-emerald-deep" : "text-ivory";
+  const subColor = tone === "light" ? "text-emerald-deep/65" : "text-muted-foreground";
   return (
     <div className={align === "center" ? "text-center mx-auto max-w-3xl" : "max-w-3xl"}>
       <Eyebrow>{eyebrow}</Eyebrow>
-      <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-[1.05] mt-5 text-balance">
+      <h2 className={`font-display text-4xl md:text-5xl lg:text-6xl ${titleColor} leading-[1.05] mt-5 text-balance`}>
         {title}
       </h2>
       {subtitle ? (
-        <p className="mt-5 text-muted-foreground text-lg font-light leading-relaxed">
+        <p className={`mt-5 ${subColor} text-lg font-light leading-relaxed`}>
           {subtitle}
         </p>
       ) : null}
@@ -50,6 +54,7 @@ function SectionHeading({
     </div>
   );
 }
+
 
 function GoldButton({
   children,
