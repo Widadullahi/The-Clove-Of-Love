@@ -584,14 +584,15 @@ function Trust() {
     },
   ];
   return (
-    <section id="trust" className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="trust" className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Trust & Safety"
+          tone="light"
           title={
             <>
               A community your family would{" "}
-              <span className="italic text-gold">be proud of.</span>
+              <span className="italic text-gold-warm">be proud of.</span>
             </>
           }
           subtitle="The Clove of Love is the platform you can confidently introduce to your sister, your cousin, or your closest friend. That is the bar."
@@ -601,13 +602,13 @@ function Trust() {
           {pillars.map((p, i) => (
             <li
               key={p.title}
-              className="p-8 rounded-3xl border border-border bg-card/40 relative"
+              className="vellum-card hover:vellum-card-hover"
             >
-              <div className="font-display italic text-3xl text-gold/40">
+              <div className="font-display italic text-3xl text-gold-warm/70">
                 0{i + 1}
               </div>
-              <h3 className="font-display text-xl text-ivory mt-3">{p.title}</h3>
-              <p className="mt-3 text-sm text-ivory/60 leading-relaxed">{p.body}</p>
+              <h3 className="font-display text-xl text-emerald-deep mt-3">{p.title}</h3>
+              <p className="mt-3 text-sm text-emerald-deep/65 leading-relaxed">{p.body}</p>
             </li>
           ))}
         </ul>
@@ -615,6 +616,7 @@ function Trust() {
     </section>
   );
 }
+
 
 function Concierge() {
   return (
