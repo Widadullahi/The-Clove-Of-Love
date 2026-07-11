@@ -800,17 +800,17 @@ function Pricing() {
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <li className="border-b border-border">
+    <li className="border-b border-emerald-deep/15">
       <button
         onClick={() => setOpen((o) => !o)}
         className="w-full flex items-center justify-between text-left py-6 gap-6 group"
         aria-expanded={open}
       >
-        <span className="font-display text-xl md:text-2xl text-ivory group-hover:text-gold transition-colors">
+        <span className="font-display text-xl md:text-2xl text-emerald-deep group-hover:text-gold-warm transition-colors">
           {q}
         </span>
         <span
-          className={`shrink-0 w-8 h-8 rounded-full border border-gold/40 grid place-items-center text-gold transition-transform duration-300 ${
+          className={`shrink-0 w-8 h-8 rounded-full border border-gold/50 grid place-items-center text-gold-warm transition-transform duration-300 ${
             open ? "rotate-45" : ""
           }`}
           aria-hidden
@@ -824,12 +824,13 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         }`}
       >
         <div className="overflow-hidden">
-          <p className="text-ivory/60 leading-relaxed max-w-3xl">{a}</p>
+          <p className="text-emerald-deep/70 leading-relaxed max-w-3xl">{a}</p>
         </div>
       </div>
     </li>
   );
 }
+
 
 function FAQ() {
   const items = [
