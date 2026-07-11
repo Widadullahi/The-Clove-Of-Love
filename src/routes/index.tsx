@@ -344,13 +344,14 @@ function HowItWorks() {
     },
   ];
   return (
-    <section id="how" className="relative py-24 lg:py-32 border-t border-border/60">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10">
+    <section id="how" className="relative py-24 lg:py-32 vellum">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="How it works"
+          tone="light"
           title={
             <>
-              Four quiet steps to <span className="italic text-gold">forever.</span>
+              Four quiet steps to <span className="italic text-gold-warm">forever.</span>
             </>
           }
           subtitle="We do not optimise for screen time. We optimise for successful marriages."
@@ -359,15 +360,15 @@ function HowItWorks() {
           {steps.map((s) => (
             <li
               key={s.n}
-              className="group relative p-8 rounded-3xl border border-border bg-card/40 hover:bg-card transition-colors duration-500"
+              className="group relative p-8 rounded-3xl border border-emerald-deep/10 bg-white/70 backdrop-blur-sm hover:bg-white hover:border-gold/40 hover:shadow-[0_20px_50px_-25px_rgba(13,27,21,0.35)] transition-all duration-500"
             >
-              <div className="font-display italic text-5xl text-gold/40 group-hover:text-gold/70 transition-colors">
+              <div className="font-display italic text-5xl text-gold group-hover:text-gold-warm transition-colors">
                 {s.n}
               </div>
-              <h3 className="font-display text-2xl text-ivory mt-4 leading-snug">
+              <h3 className="font-display text-2xl text-emerald-deep mt-4 leading-snug">
                 {s.title}
               </h3>
-              <p className="mt-3 text-sm text-ivory/60 leading-relaxed">{s.body}</p>
+              <p className="mt-3 text-sm text-emerald-deep/70 leading-relaxed">{s.body}</p>
             </li>
           ))}
         </ol>
@@ -375,6 +376,7 @@ function HowItWorks() {
     </section>
   );
 }
+
 
 function SoulScore() {
   const traits = [
