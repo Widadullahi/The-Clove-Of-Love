@@ -182,10 +182,20 @@
   height: 1px;
 }
 
+@utility vellum {
+  background-color: var(--cream);
+  color: var(--emerald-deep);
+  background-image:
+    radial-gradient(circle at 15% 20%, color-mix(in oklab, var(--gold) 12%, transparent) 0, transparent 45%),
+    radial-gradient(circle at 85% 80%, color-mix(in oklab, var(--emerald-deep) 6%, transparent) 0, transparent 50%),
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.77  0 0 0 0 0.63  0 0 0 0 0.35  0 0 0 0.35 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/></svg>");
+}
+
 @utility chapter-mark {
   font-family: var(--font-display);
   font-style: italic;
   color: color-mix(in oklab, var(--gold) 70%, transparent);
   letter-spacing: 0.02em;
 }
+
 
