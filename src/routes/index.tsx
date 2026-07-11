@@ -686,7 +686,7 @@ function Stories() {
           {stories.map((s) => (
             <li
               key={s.names}
-              className="rounded-3xl overflow-hidden border border-emerald-deep/10 bg-white flex flex-col shadow-[0_20px_50px_-30px_rgba(13,27,21,0.4)] hover:shadow-[0_30px_70px_-30px_rgba(13,27,21,0.5)] transition-shadow duration-500"
+              className="rounded-3xl overflow-hidden border border-emerald-deep/10 bg-white flex flex-col shadow-[var(--shadow-vellum-card)] hover:shadow-[var(--shadow-vellum-card-hover)] transition-shadow duration-500"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
