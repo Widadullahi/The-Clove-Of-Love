@@ -643,7 +643,13 @@ function Concierge() {
   return (
     <section className="relative py-24 lg:py-32 border-t border-border/60 overflow-hidden">
       <div className="absolute inset-0 adinkra-pattern pointer-events-none" aria-hidden />
-      <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
+      <img
+        src={botanical}
+        alt=""
+        aria-hidden
+        className="pointer-events-none select-none absolute inset-x-0 top-0 mx-auto w-[900px] max-w-full opacity-[0.12] mix-blend-screen"
+      />
+      <div className="relative max-w-5xl mx-auto px-6 lg:px-10 text-center">
         <Eyebrow>The AI Concierge</Eyebrow>
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-[1.05] mt-6 text-balance">
           "Based on your shared values, communication styles, faith, and the
