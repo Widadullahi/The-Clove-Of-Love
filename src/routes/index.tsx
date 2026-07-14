@@ -441,59 +441,132 @@ function SoulScore() {
           </div>
         </div>
 
-        {/* Sample compatibility letter card */}
-        <div className="lg:col-span-7">
-          <div className="relative rounded-3xl border border-border bg-gradient-emerald p-8 md:p-10 shadow-editorial">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <span className="text-[10px] uppercase tracking-[0.25em] text-gold">
-                  SoulScore™
-                </span>
-                <span className="h-px w-10 bg-gold/40" aria-hidden />
-              </div>
-              <div className="font-display italic text-5xl text-gold leading-none">
-                96<span className="text-2xl align-top">%</span>
-              </div>
-            </div>
+        {/* Sample compatibility letter — displayed in a phone mockup */}
+        <div className="lg:col-span-7 flex justify-center">
+          <div className="relative mx-auto w-full max-w-[380px]">
+            {/* Soft glow behind device */}
+            <div
+              className="absolute -inset-10 rounded-[3rem] opacity-70 blur-3xl pointer-events-none"
+              style={{
+                background:
+                  "radial-gradient(circle at 50% 30%, color-mix(in oklab, var(--gold) 35%, transparent), transparent 65%)",
+              }}
+              aria-hidden
+            />
 
-            <h3 className="mt-6 font-display text-3xl md:text-4xl text-ivory leading-tight">
-              Adaeze, meet Tolu.
-            </h3>
+            {/* Phone frame */}
+            <div className="relative rounded-[3rem] bg-neutral-950 p-3 shadow-editorial border border-white/10 ring-1 ring-black/40">
+              {/* Side buttons */}
+              <span className="absolute -left-[3px] top-24 h-10 w-[3px] rounded-l bg-neutral-800" aria-hidden />
+              <span className="absolute -left-[3px] top-40 h-16 w-[3px] rounded-l bg-neutral-800" aria-hidden />
+              <span className="absolute -right-[3px] top-32 h-20 w-[3px] rounded-r bg-neutral-800" aria-hidden />
 
-            <p className="mt-5 text-ivory/70 leading-relaxed">
-              You are both eldest children of close-knit families in Lagos, both
-              hoping to marry within a year, and both quietly serious about
-              faith without being loud about it. His way of loving is showing up;
-              yours is speaking it. Those two, gently taught to each other,
-              usually make a very good marriage.
-            </p>
-
-            <div className="mt-8 grid sm:grid-cols-2 gap-x-6 gap-y-3 border-t border-border pt-6">
-              {traits.map((t) => (
-                <div
-                  key={t.label}
-                  className="flex items-baseline justify-between gap-4 text-sm py-1.5 border-b border-border/50 last:border-0"
-                >
-                  <span className="text-ivory/50 uppercase tracking-wider text-[10px]">
-                    {t.label}
-                  </span>
-                  <span className="text-ivory/90 text-right">
-                    {t.a === t.b ? (
-                      <span className="text-gold">{t.a}</span>
-                    ) : (
-                      <>
-                        <span>{t.a}</span>
-                        <span className="text-ivory/40"> · {t.b}</span>
-                      </>
-                    )}
+              {/* Screen */}
+              <div className="relative rounded-[2.4rem] overflow-hidden bg-gradient-emerald">
+                {/* Status bar */}
+                <div className="relative flex items-center justify-between px-7 pt-3 pb-2 text-[10px] text-ivory/80 font-medium">
+                  <span>9:41</span>
+                  {/* Notch */}
+                  <span className="absolute left-1/2 -translate-x-1/2 top-1.5 h-5 w-24 rounded-full bg-black" aria-hidden />
+                  <span className="flex items-center gap-1">
+                    <svg width="12" height="10" viewBox="0 0 12 10" aria-hidden>
+                      <rect x="0" y="6" width="2" height="4" rx="0.5" fill="currentColor" />
+                      <rect x="3" y="4" width="2" height="6" rx="0.5" fill="currentColor" />
+                      <rect x="6" y="2" width="2" height="8" rx="0.5" fill="currentColor" />
+                      <rect x="9" y="0" width="2" height="10" rx="0.5" fill="currentColor" />
+                    </svg>
+                    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden>
+                      <path d="M7 1a9 9 0 0 1 6 2.3M7 4a5.5 5.5 0 0 1 3.7 1.4M7 7a2 2 0 0 1 1.4.6" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+                    </svg>
+                    <svg width="18" height="9" viewBox="0 0 18 9" aria-hidden>
+                      <rect x="0.5" y="0.5" width="14" height="8" rx="2" fill="none" stroke="currentColor" />
+                      <rect x="2" y="2" width="11" height="5" rx="1" fill="currentColor" />
+                      <rect x="15" y="3" width="2" height="3" rx="0.5" fill="currentColor" />
+                    </svg>
                   </span>
                 </div>
-              ))}
+
+                {/* App header */}
+                <div className="flex items-center justify-between px-6 pt-4 pb-3 border-b border-white/5">
+                  <div className="flex items-center gap-2">
+                    <img src={logoMark} alt="" className="w-6 h-6 object-contain" />
+                    <span className="font-display italic text-ivory text-sm">
+                      Concierge
+                    </span>
+                  </div>
+                  <span className="text-[9px] uppercase tracking-[0.25em] text-ivory/45">
+                    Today
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="px-6 pt-6 pb-8 max-h-[560px] overflow-hidden">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <span className="text-[10px] uppercase tracking-[0.25em] text-gold">
+                        SoulScore™
+                      </span>
+                      <span className="h-px w-8 bg-gold/40" aria-hidden />
+                    </div>
+                    <div className="font-display italic text-4xl text-gold leading-none">
+                      96<span className="text-lg align-top">%</span>
+                    </div>
+                  </div>
+
+                  <h3 className="mt-4 font-display text-2xl text-ivory leading-tight">
+                    Adaeze, meet Tolu.
+                  </h3>
+
+                  <p className="mt-4 text-ivory/70 text-[13px] leading-relaxed">
+                    You are both eldest children of close-knit families in Lagos,
+                    both hoping to marry within a year, and both quietly serious
+                    about faith without being loud about it. His way of loving is
+                    showing up; yours is speaking it.
+                  </p>
+
+                  <div className="mt-6 space-y-2 border-t border-white/10 pt-4">
+                    {traits.slice(0, 5).map((t) => (
+                      <div
+                        key={t.label}
+                        className="flex items-baseline justify-between gap-4 text-[11px]"
+                      >
+                        <span className="text-ivory/45 uppercase tracking-wider text-[9px]">
+                          {t.label}
+                        </span>
+                        <span className="text-ivory/90 text-right truncate">
+                          {t.a === t.b ? (
+                            <span className="text-gold">{t.a}</span>
+                          ) : (
+                            <span>{t.a}</span>
+                          )}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <p className="mt-5 text-[10px] text-ivory/40 italic">
+                    — Written by the AI Concierge
+                  </p>
+
+                  <button className="mt-6 w-full rounded-full bg-gold text-emerald-deep font-semibold text-xs py-3 tracking-wide">
+                    I'm Interested
+                  </button>
+                </div>
+
+                {/* Home indicator */}
+                <div className="flex justify-center pb-2">
+                  <span className="h-1 w-24 rounded-full bg-ivory/40" aria-hidden />
+                </div>
+              </div>
             </div>
 
-            <p className="mt-6 text-xs text-ivory/40 italic">
-              — Written for you by the The Clove of Love AI Concierge
-            </p>
+            {/* Floating notification bubble */}
+            <div className="hidden md:flex absolute -left-10 top-16 items-center gap-2 bg-cream text-emerald-deep px-4 py-2 rounded-2xl shadow-editorial rotate-[-6deg]">
+              <span className="text-[9px] uppercase tracking-[0.2em] text-emerald-deep/60">
+                New match
+              </span>
+              <span className="font-display italic text-sm">96%</span>
+            </div>
           </div>
         </div>
       </div>
