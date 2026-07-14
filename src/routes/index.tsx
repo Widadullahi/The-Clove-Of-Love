@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroCouple from "@/assets/hero-couple.jpg";
 import logoMark from "@/assets/logo-mark.png";
+import botanical from "@/assets/botanical-cream.jpg";
 
 import story1 from "@/assets/story-1.jpg";
 import story2 from "@/assets/story-2.jpg";
@@ -161,39 +162,59 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative overflow-hidden grain">
-      <span className="grain-overlay" aria-hidden />
-      <div className="absolute inset-0 adinkra-pattern pointer-events-none" aria-hidden />
+    <section className="relative overflow-hidden vellum">
+      {/* Botanical background flourish */}
+      <img
+        src={botanical}
+        alt=""
+        aria-hidden
+        className="pointer-events-none select-none absolute inset-0 w-full h-full object-cover opacity-[0.35] mix-blend-multiply"
+      />
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(1200px 600px at 85% 15%, color-mix(in oklab, var(--gold) 18%, transparent), transparent 60%), radial-gradient(900px 500px at 10% 90%, color-mix(in oklab, var(--emerald-deep) 8%, transparent), transparent 65%)",
+        }}
+        aria-hidden
+      />
+
       {/* Editorial chapter mark */}
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-4 text-[10px] uppercase tracking-[0.5em] text-ivory/40">
-        <span className="h-px w-16 bg-ivory/20" />
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-4 text-[10px] uppercase tracking-[0.5em] text-emerald-deep/45">
+        <span className="h-px w-16 bg-emerald-deep/20" />
         <span>Volume I · The Prologue</span>
-        <span className="h-px w-16 bg-ivory/20" />
+        <span className="h-px w-16 bg-emerald-deep/20" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-24 lg:pt-36 pb-24 lg:pb-36 grid lg:grid-cols-12 gap-14 items-center">
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-10 pt-24 lg:pt-36 pb-24 lg:pb-36 grid lg:grid-cols-12 gap-14 items-center">
         <div className="lg:col-span-6 animate-fade-up">
           <div className="flex items-center gap-3">
             <span className="chapter-mark text-sm">№ 01</span>
-            <span className="h-px w-10 bg-gold/40" />
+            <span className="h-px w-10 bg-gold/60" />
             <Eyebrow>Matrimony for the Discerning</Eyebrow>
           </div>
-          <h1 className="font-display text-[3.25rem] md:text-7xl lg:text-[5.5rem] text-ivory leading-[0.98] mt-8 text-balance tracking-tight">
+          <h1 className="font-display text-[3.25rem] md:text-7xl lg:text-[5.5rem] text-emerald-deep leading-[0.98] mt-8 text-balance tracking-tight">
             Meet the one <br className="hidden md:block" />
-            you're <span className="italic text-gold relative">
+            you're{" "}
+            <span className="italic text-gold-warm relative">
               meant
-              <span className="absolute -bottom-1 left-0 right-2 h-px bg-gold/60" aria-hidden />
+              <span className="absolute -bottom-1 left-0 right-2 h-px bg-gold-warm/60" aria-hidden />
             </span>{" "}
-            <span className="italic text-gold">to marry.</span>
+            <span className="italic text-gold-warm">to marry.</span>
           </h1>
-          <p className="mt-8 text-lg text-ivory/70 max-w-xl font-light leading-[1.7]">
+          <p className="mt-8 text-lg text-emerald-deep/70 max-w-xl font-light leading-[1.7]">
             The Clove of Love is a private, AI-powered matrimonial house for verified,
             marriage-minded singles across Africa. No endless swiping. No games.
             Just intentional introductions to people ready for forever.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4">
             <GoldButton href="/auth">Begin the Rite →</GoldButton>
-            <GhostButton href="#how">Our philosophy</GhostButton>
+            <a
+              href="#how"
+              className="inline-flex items-center justify-center px-7 py-3.5 rounded-full border border-emerald-deep/25 text-emerald-deep font-medium text-sm tracking-wide hover:bg-emerald-deep hover:text-ivory transition-all duration-300"
+            >
+              Our philosophy
+            </a>
           </div>
 
           <div className="mt-14 grid grid-cols-3 gap-6 max-w-lg">
@@ -202,9 +223,9 @@ function Hero() {
               { n: "1,120", l: "Marriages, and counting" },
               { n: "96%", l: "Median SoulScore™" },
             ].map((s) => (
-              <div key={s.l} className="border-l border-gold/30 pl-4">
-                <div className="font-display text-2xl md:text-3xl text-ivory">{s.n}</div>
-                <div className="text-[10px] uppercase tracking-[0.2em] text-ivory/50 mt-1 leading-snug">
+              <div key={s.l} className="border-l border-gold/50 pl-4">
+                <div className="font-display text-2xl md:text-3xl text-emerald-deep">{s.n}</div>
+                <div className="text-[10px] uppercase tracking-[0.2em] text-emerald-deep/55 mt-1 leading-snug">
                   {s.l}
                 </div>
               </div>
@@ -215,11 +236,11 @@ function Hero() {
         {/* Right visual */}
         <div className="lg:col-span-6 relative">
           {/* Ornament frame */}
-          <div className="absolute -inset-4 lg:-inset-6 border border-gold/20 rounded-[2rem] pointer-events-none" aria-hidden />
-          <div className="absolute -top-3 -left-3 w-16 h-16 border-t-2 border-l-2 border-gold/60 rounded-tl-3xl" aria-hidden />
-          <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-2 border-r-2 border-gold/60 rounded-br-3xl" aria-hidden />
+          <div className="absolute -inset-4 lg:-inset-6 border border-gold/30 rounded-[2rem] pointer-events-none" aria-hidden />
+          <div className="absolute -top-3 -left-3 w-16 h-16 border-t-2 border-l-2 border-gold/70 rounded-tl-3xl" aria-hidden />
+          <div className="absolute -bottom-3 -right-3 w-16 h-16 border-b-2 border-r-2 border-gold/70 rounded-br-3xl" aria-hidden />
 
-          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-border shadow-editorial">
+          <div className="relative aspect-[4/5] rounded-3xl overflow-hidden border border-emerald-deep/10 shadow-editorial">
             <img
               src={heroCouple}
               alt="A young Nigerian couple in refined traditional attire, standing together in warm side-light"
@@ -261,25 +282,25 @@ function Hero() {
           </div>
 
           {/* Floating trust badge */}
-          <div className="hidden md:flex absolute -bottom-8 -left-8 items-center gap-3 bg-cream text-emerald-deep px-6 py-4 rounded-2xl shadow-editorial">
+          <div className="hidden md:flex absolute -bottom-8 -left-8 items-center gap-3 bg-emerald-deep text-ivory px-6 py-4 rounded-2xl shadow-editorial border border-gold/25">
             <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-600 opacity-70 animate-ping" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-600" />
+              <span className="absolute inline-flex h-full w-full rounded-full bg-gold opacity-70 animate-ping" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-gold" />
             </span>
             <div>
-              <div className="text-[10px] uppercase tracking-[0.25em] text-emerald-deep/60">
+              <div className="text-[10px] uppercase tracking-[0.25em] text-ivory/60">
                 Verified today
               </div>
-              <div className="font-display italic font-semibold text-lg leading-none mt-0.5">
+              <div className="font-display italic font-semibold text-lg leading-none mt-0.5 text-gold">
                 47 new members
               </div>
             </div>
           </div>
 
           {/* Concierge quill card */}
-          <div className="hidden lg:flex absolute -top-6 -right-6 items-center gap-3 bg-emerald-deeper/95 backdrop-blur border border-gold/30 px-5 py-3 rounded-full shadow-editorial">
-            <span className="font-display italic text-gold">✒</span>
-            <span className="text-[11px] uppercase tracking-[0.25em] text-ivory/80">
+          <div className="hidden lg:flex absolute -top-6 -right-6 items-center gap-3 bg-white/90 backdrop-blur border border-gold/40 px-5 py-3 rounded-full shadow-[var(--shadow-vellum-card)]">
+            <span className="font-display italic text-gold-warm">✒</span>
+            <span className="text-[11px] uppercase tracking-[0.25em] text-emerald-deep/75">
               A letter, not a swipe
             </span>
           </div>
@@ -584,7 +605,19 @@ function Trust() {
     },
   ];
   return (
-    <section id="trust" className="relative py-24 lg:py-32 vellum">
+    <section id="trust" className="relative py-24 lg:py-32 vellum overflow-hidden">
+      <img
+        src={botanical}
+        alt=""
+        aria-hidden
+        className="pointer-events-none select-none absolute -right-32 -top-24 w-[720px] opacity-40 mix-blend-multiply rotate-12"
+      />
+      <img
+        src={botanical}
+        alt=""
+        aria-hidden
+        className="pointer-events-none select-none absolute -left-40 bottom-0 w-[640px] opacity-25 mix-blend-multiply -rotate-6"
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Trust & Safety"
@@ -622,7 +655,13 @@ function Concierge() {
   return (
     <section className="relative py-24 lg:py-32 border-t border-border/60 overflow-hidden">
       <div className="absolute inset-0 adinkra-pattern pointer-events-none" aria-hidden />
-      <div className="max-w-5xl mx-auto px-6 lg:px-10 text-center">
+      <img
+        src={botanical}
+        alt=""
+        aria-hidden
+        className="pointer-events-none select-none absolute inset-x-0 top-0 mx-auto w-[900px] max-w-full opacity-[0.12] mix-blend-screen"
+      />
+      <div className="relative max-w-5xl mx-auto px-6 lg:px-10 text-center">
         <Eyebrow>The AI Concierge</Eyebrow>
         <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-ivory leading-[1.05] mt-6 text-balance">
           "Based on your shared values, communication styles, faith, and the
