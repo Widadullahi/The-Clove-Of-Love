@@ -605,7 +605,19 @@ function Trust() {
     },
   ];
   return (
-    <section id="trust" className="relative py-24 lg:py-32 vellum">
+    <section id="trust" className="relative py-24 lg:py-32 vellum overflow-hidden">
+      <img
+        src={botanical}
+        alt=""
+        aria-hidden
+        className="pointer-events-none select-none absolute -right-32 -top-24 w-[720px] opacity-40 mix-blend-multiply rotate-12"
+      />
+      <img
+        src={botanical}
+        alt=""
+        aria-hidden
+        className="pointer-events-none select-none absolute -left-40 bottom-0 w-[640px] opacity-25 mix-blend-multiply -rotate-6"
+      />
       <div className="max-w-7xl mx-auto px-6 lg:px-10 relative">
         <SectionHeading
           eyebrow="Trust & Safety"
