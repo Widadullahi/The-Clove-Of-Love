@@ -442,11 +442,20 @@ function SoulScore() {
         </div>
 
         {/* Sample compatibility letter — displayed in a phone mockup */}
-        <div className="lg:col-span-7 flex justify-center">
-          <div className="relative mx-auto w-full max-w-[380px]">
+        <div className="lg:col-span-7 flex justify-center w-full min-w-0">
+          <div
+            className="relative mx-auto w-full"
+            style={{
+              maxWidth: "clamp(260px, 78vw, 380px)",
+              paddingLeft: "clamp(1.5rem, 6vw, 3rem)",
+              paddingRight: "clamp(1.5rem, 6vw, 3rem)",
+              paddingTop: "clamp(1rem, 4vw, 2rem)",
+              paddingBottom: "clamp(1rem, 4vw, 2rem)",
+            }}
+          >
             {/* Soft glow behind device */}
             <div
-              className="absolute -inset-10 rounded-[3rem] opacity-70 blur-3xl pointer-events-none"
+              className="absolute inset-4 sm:-inset-6 rounded-[3rem] opacity-70 blur-3xl pointer-events-none"
               style={{
                 background:
                   "radial-gradient(circle at 50% 30%, color-mix(in oklab, var(--gold) 35%, transparent), transparent 65%)",
@@ -454,20 +463,29 @@ function SoulScore() {
               aria-hidden
             />
 
-            {/* Phone frame */}
-            <div className="relative rounded-[3rem] bg-neutral-950 p-3 shadow-editorial border border-white/10 ring-1 ring-black/40">
+            {/* Phone frame — fluid scale */}
+            <div
+              className="relative bg-neutral-950 shadow-editorial border border-white/10 ring-1 ring-black/40"
+              style={{
+                borderRadius: "clamp(2rem, 8vw, 3rem)",
+                padding: "clamp(0.5rem, 1.5vw, 0.75rem)",
+              }}
+            >
               {/* Side buttons */}
-              <span className="absolute -left-[3px] top-24 h-10 w-[3px] rounded-l bg-neutral-800" aria-hidden />
-              <span className="absolute -left-[3px] top-40 h-16 w-[3px] rounded-l bg-neutral-800" aria-hidden />
-              <span className="absolute -right-[3px] top-32 h-20 w-[3px] rounded-r bg-neutral-800" aria-hidden />
+              <span className="absolute -left-[3px] top-[18%] h-[8%] w-[3px] rounded-l bg-neutral-800" aria-hidden />
+              <span className="absolute -left-[3px] top-[30%] h-[12%] w-[3px] rounded-l bg-neutral-800" aria-hidden />
+              <span className="absolute -right-[3px] top-[24%] h-[15%] w-[3px] rounded-r bg-neutral-800" aria-hidden />
 
               {/* Screen */}
-              <div className="relative rounded-[2.4rem] overflow-hidden bg-gradient-emerald">
+              <div
+                className="relative overflow-hidden bg-gradient-emerald"
+                style={{ borderRadius: "clamp(1.5rem, 6.5vw, 2.4rem)" }}
+              >
                 {/* Status bar */}
-                <div className="relative flex items-center justify-between px-7 pt-3 pb-2 text-[10px] text-ivory/80 font-medium">
+                <div className="relative flex items-center justify-between px-6 sm:px-7 pt-3 pb-2 text-[10px] text-ivory/80 font-medium">
                   <span>9:41</span>
                   {/* Notch */}
-                  <span className="absolute left-1/2 -translate-x-1/2 top-1.5 h-5 w-24 rounded-full bg-black" aria-hidden />
+                  <span className="absolute left-1/2 -translate-x-1/2 top-1.5 h-4 sm:h-5 w-20 sm:w-24 rounded-full bg-black" aria-hidden />
                   <span className="flex items-center gap-1">
                     <svg width="12" height="10" viewBox="0 0 12 10" aria-hidden>
                       <rect x="0" y="6" width="2" height="4" rx="0.5" fill="currentColor" />
@@ -487,53 +505,53 @@ function SoulScore() {
                 </div>
 
                 {/* App header */}
-                <div className="flex items-center justify-between px-6 pt-4 pb-3 border-b border-white/5">
-                  <div className="flex items-center gap-2">
-                    <img src={logoMark} alt="" className="w-6 h-6 object-contain" />
-                    <span className="font-display italic text-ivory text-sm">
+                <div className="flex items-center justify-between gap-3 px-5 sm:px-6 pt-4 pb-3 border-b border-white/5 min-w-0">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <img src={logoMark} alt="" className="w-6 h-6 shrink-0 object-contain" />
+                    <span className="font-display italic text-ivory text-sm truncate">
                       Concierge
                     </span>
                   </div>
-                  <span className="text-[9px] uppercase tracking-[0.25em] text-ivory/45">
+                  <span className="shrink-0 text-[9px] uppercase tracking-[0.25em] text-ivory/45">
                     Today
                   </span>
                 </div>
 
-                {/* Content */}
-                <div className="px-6 pt-6 pb-8 max-h-[560px] overflow-hidden">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <span className="text-[10px] uppercase tracking-[0.25em] text-gold">
+                {/* Content — fluid vertical spacing */}
+                <div className="px-5 sm:px-6 pt-5 sm:pt-6 pb-6 sm:pb-8 min-w-0">
+                  <div className="flex items-center justify-between gap-3 min-w-0">
+                    <div className="flex items-center gap-2 min-w-0">
+                      <span className="text-[10px] uppercase tracking-[0.25em] text-gold truncate">
                         SoulScore™
                       </span>
-                      <span className="h-px w-8 bg-gold/40" aria-hidden />
+                      <span className="hidden sm:block h-px w-8 bg-gold/40 shrink-0" aria-hidden />
                     </div>
-                    <div className="font-display italic text-4xl text-gold leading-none">
-                      96<span className="text-lg align-top">%</span>
+                    <div className="shrink-0 font-display italic text-3xl sm:text-4xl text-gold leading-none">
+                      96<span className="text-base sm:text-lg align-top">%</span>
                     </div>
                   </div>
 
-                  <h3 className="mt-4 font-display text-2xl text-ivory leading-tight">
+                  <h3 className="mt-4 font-display text-xl sm:text-2xl text-ivory leading-tight text-balance">
                     Adaeze, meet Tolu.
                   </h3>
 
-                  <p className="mt-4 text-ivory/70 text-[13px] leading-relaxed">
+                  <p className="mt-3 sm:mt-4 text-ivory/70 text-[12px] sm:text-[13px] leading-relaxed">
                     You are both eldest children of close-knit families in Lagos,
                     both hoping to marry within a year, and both quietly serious
                     about faith without being loud about it. His way of loving is
                     showing up; yours is speaking it.
                   </p>
 
-                  <div className="mt-6 space-y-2 border-t border-white/10 pt-4">
+                  <div className="mt-5 sm:mt-6 space-y-2 border-t border-white/10 pt-4">
                     {traits.slice(0, 5).map((t) => (
                       <div
                         key={t.label}
-                        className="flex items-baseline justify-between gap-4 text-[11px]"
+                        className="flex items-baseline justify-between gap-3 text-[11px] min-w-0"
                       >
-                        <span className="text-ivory/45 uppercase tracking-wider text-[9px]">
+                        <span className="shrink-0 text-ivory/45 uppercase tracking-wider text-[9px]">
                           {t.label}
                         </span>
-                        <span className="text-ivory/90 text-right truncate">
+                        <span className="min-w-0 text-ivory/90 text-right truncate">
                           {t.a === t.b ? (
                             <span className="text-gold">{t.a}</span>
                           ) : (
@@ -544,24 +562,24 @@ function SoulScore() {
                     ))}
                   </div>
 
-                  <p className="mt-5 text-[10px] text-ivory/40 italic">
+                  <p className="mt-4 sm:mt-5 text-[10px] text-ivory/40 italic">
                     — Written by the AI Concierge
                   </p>
 
-                  <button className="mt-6 w-full rounded-full bg-gold text-emerald-deep font-semibold text-xs py-3 tracking-wide">
+                  <button className="mt-5 sm:mt-6 w-full rounded-full bg-gold text-emerald-deep font-semibold text-xs py-3 tracking-wide">
                     I'm Interested
                   </button>
                 </div>
 
                 {/* Home indicator */}
                 <div className="flex justify-center pb-2">
-                  <span className="h-1 w-24 rounded-full bg-ivory/40" aria-hidden />
+                  <span className="h-1 w-20 sm:w-24 rounded-full bg-ivory/40" aria-hidden />
                 </div>
               </div>
             </div>
 
-            {/* Floating notification bubble */}
-            <div className="hidden md:flex absolute -left-10 top-16 items-center gap-2 bg-cream text-emerald-deep px-4 py-2 rounded-2xl shadow-editorial rotate-[-6deg]">
+            {/* Floating notification bubble — hidden below md so it never clips */}
+            <div className="hidden md:flex absolute left-0 top-8 items-center gap-2 bg-cream text-emerald-deep px-4 py-2 rounded-2xl shadow-editorial rotate-[-6deg]">
               <span className="text-[9px] uppercase tracking-[0.2em] text-emerald-deep/60">
                 New match
               </span>
