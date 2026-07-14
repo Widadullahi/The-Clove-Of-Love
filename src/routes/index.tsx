@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroCouple from "@/assets/hero-couple.jpg";
 import logoMark from "@/assets/logo-mark.png";
+import botanical from "@/assets/botanical-cream.jpg";
 
 import story1 from "@/assets/story-1.jpg";
 import story2 from "@/assets/story-2.jpg";
