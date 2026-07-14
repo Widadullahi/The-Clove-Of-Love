@@ -1,0 +1,16 @@
+{
+  "name": "The Clove of Love",
+  "short_name": "Clove",
+  "description": "The Clove of Love is Africa's premium matrimonial platform for verified, marriage-minded singles.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0d1b15",
+  "theme_color": "#0d1b15",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}

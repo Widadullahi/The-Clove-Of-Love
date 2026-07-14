@@ -10,7 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import { reportLovableError } from "../lib/lovable-error-reporting";
+import { reportAppError } from "../lib/error-reporting";
 
 function NotFoundComponent() {
   return (
@@ -38,7 +38,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   console.error(error);
   const router = useRouter();
   useEffect(() => {
-    reportLovableError(error, { boundary: "tanstack_root_error_component" });
+    reportAppError(error, { boundary: "tanstack_root_error_component" });
   }, [error]);
 
   return (
@@ -103,6 +103,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     links: [
       { rel: "stylesheet", href: appCss },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "apple-touch-icon", href: "/favicon.ico" },
+      { rel: "manifest", href: "/manifest.webmanifest" },
+      { name: "theme-color", content: "#0d1b15" },
+      { name: "application-name", content: "The Clove of Love" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
