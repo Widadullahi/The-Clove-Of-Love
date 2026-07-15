@@ -4,7 +4,7 @@ const require = createRequire(import.meta.url);
 const serverEntry = require('../dist/server/server.js').default;
 
 export const config = {
-  runtime: 'nodejs20.x',
+  runtime: 'nodejs',
 };
 
 export default async function handler(req, res) {
